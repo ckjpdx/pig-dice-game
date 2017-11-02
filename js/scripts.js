@@ -10,6 +10,11 @@ function PigDice(player1Name, player2Name){
   this.action = '';
 }
 
+function HallOfFameWinner(pigDice, winner, loser){
+  this.name = pigDice[winner].name;
+  this.score = pigDice[winner].score;
+}
+
 PigDice.prototype.coinToss = function () {
   var toss = Math.random();
   if (toss > 0.5) {
@@ -99,13 +104,11 @@ $(function(){ // greater function
       $("#victory-name").text(victoryMessage);
       $("#player-info-div").slideDown();
       $("#gameplay-div").slideUp();
-      var hallOfFameWinner = {};
-      hallOfFameWinner.name = pigDice[winner].name;
-      hallOfFameWinner.score = pigDice[winner].score;
+      var hallOfFameWinner = new HallOfFameWinner(pigDice, winner, loser);
       hallOfFame.push(hallOfFameWinner);
-      $("#hall-of-fame").empty();
+      $("#hall-of-fame-names").empty();
       hallOfFame.forEach(function(winner){
-        $("#hall-of-fame").append(winner.name + " " + winner.score + "<br>");
+        $("#hall-of-fame-names").append(winner.name + " scored " + winner.score + "<br>");
       });
     }
   });
