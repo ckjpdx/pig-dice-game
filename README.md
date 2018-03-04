@@ -1,5 +1,5 @@
-# Title
-Pig Dice Game
+# Pig Dice
+a game of pig dice made with jQuery
 
 ## Synopsis
 A very short game of pig dice; 24 point wins the game. Can you win in one lucky go?
