@@ -11,7 +11,7 @@ Practice JavaScript functions, constructors, prototypes, and separating front-en
 jquery-3.2.1, JavaScript, CSS
 
 ## Installation
-clone with git or view on gh-pages:
+clone with git or view on gh-pages: [pig-dice-game](ckjpdx.github.io/pig-dice-game/)
 
 ## Usage
 Enter player names and click start game. The game will randomly choose either player 1 or player 2 to start first. Whoever starts first can roll a "die" (random value from 1-6) and start accumulating score. If they get a '1' as a number they lose all their accumulated points, but they also have the option to hold on to what they have earned thus far and pass the turn to the other player.
